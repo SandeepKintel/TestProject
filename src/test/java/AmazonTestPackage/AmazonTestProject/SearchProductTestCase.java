@@ -17,6 +17,7 @@ public class SearchProductTestCase extends AmazonLaunchAndQuit{
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		AmazonShoppingPage amzshp = new AmazonShoppingPage(driver);
 		amzshp.searchProduct("Pen");
+		Thread.sleep(2000);
 		List<WebElement> li = driver.findElements(By.xpath("//div[@class='two-pane-results-container']/div/div"));
 		Thread.sleep(2000);
 		System.out.println(li.size());

@@ -8,7 +8,6 @@ import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -21,6 +20,7 @@ public class LoginTest extends AmazonLaunchAndQuit
 	{
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		LoginPage lp= new LoginPage(driver);
+		Thread.sleep(3000);
 		lp.clickSignIn();
 		lp.EnterEmail(username);
 		lp.ClickContinueButton();
